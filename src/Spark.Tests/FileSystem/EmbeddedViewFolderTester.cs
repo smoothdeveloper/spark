@@ -42,7 +42,7 @@ namespace Spark.Tests.FileSystem
             var filesystem = new FileSystemViewFolder("FileSystem\\Embedded".AsPath());
             Assert.IsTrue(filesystem.HasView("Home\\Index.spark".AsPath()));
 
-            var files = filesystem.ListViews("home");
+            var files = filesystem.ListViews("Home");
             Assert.AreEqual(2, files.Count);
             Assert.That(files.Any(f => Path.GetFileName(f) == "Index.spark"));
             Assert.That(files.Any(f => Path.GetFileName(f) == "List.spark"));
